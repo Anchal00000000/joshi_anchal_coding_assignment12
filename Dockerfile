@@ -1,11 +1,19 @@
+# Build stage
 FROM node:20-alpine AS build
-WORKDIR /joshi_anchal_ui_garden
+
+WORKDIR /joshi_anchal_ui_garden_build_checks
+
 COPY package*.json ./
-RUN npm ci
+RUN npm ci --legacy-peer-deps
+
 COPY . .
 RUN npm run build
 
+# Production stage
 FROM nginx:alpine
-COPY --from=build /joshi_anchal_ui_garden/build /usr/share/nginx/html
-EXPOSE 8083
-CMD ["nginx", "-g", "daemon off;"]
+
+COPY --from=build /joshi_anchal_ui_garden_build_checks/build /usr/share/nginx/html
+
+EXPOSE 8018
+
+COPY nginx.conf /etc/nginx/conf.d/default.conf

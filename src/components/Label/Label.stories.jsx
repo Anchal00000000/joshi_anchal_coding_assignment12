@@ -1,30 +1,32 @@
-import Label from "./Label";
+import Label from '../Label';
 
-export default {
-  title: "Components/Label",
+const LabelMeta = {
+  title: 'Components/Label',
   component: Label,
   argTypes: {
-    text: { control: "text" },
-    color: { control: "color" },
-    fontSize: { control: "text" },
-    disabled: { control: "boolean" }
-  }
+    text: { control: 'text' },
+    color: { control: 'color' },
+    fontSize: { control: 'text' },
+    disabled: { control: 'boolean' },
+  },
 };
+
+export default LabelMeta;
 
 export const Default = {
   args: {
-    text: "Label Text",
-    color: "black",
-    fontSize: "16px",
-    disabled: false
-  }
+    text: 'Label Text',
+    color: 'black',
+    fontSize: '16px',
+    disabled: false,
+  },
 };
 
 export const Disabled = {
   args: {
-    text: "Disabled Label",
-    color: "black",
-    fontSize: "16px",
-    disabled: true
-  }
+    text: 'Disabled Label',
+    color: 'black',
+    fontSize: '16px',
+    disabled: true,
+  },
 };
