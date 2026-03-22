@@ -1,8 +1,8 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import { Table, TableRow, TableCell } from "./index";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { Table, TableRow, TableCell } from './index';
 
-test("Table renders", () => {
+test('Table renders', () => {
   render(
     <Table>
       <tbody>
@@ -10,8 +10,8 @@ test("Table renders", () => {
           <TableCell>Data</TableCell>
         </TableRow>
       </tbody>
-    </Table>
+    </Table>,
   );
 
-  expect(screen.getByText("Data")).toBeVisible();
+  expect(screen.getByText('Data')).toBeVisible();
 });

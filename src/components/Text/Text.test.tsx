@@ -1,14 +1,14 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import Text from "./Text";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import Text from './Text';
 
-test("Text renders", () => {
+test('Text renders', () => {
   render(<Text content="Hello World" />);
-  expect(screen.getByText("Hello World")).toBeVisible();
+  expect(screen.getByText('Hello World')).toBeVisible();
 });
 
-test("Text changes color when disabled", () => {
+test('Text changes color when disabled', () => {
   render(<Text content="Disabled Text" disabled />);
-  const text = screen.getByText("Disabled Text");
-  expect(text).toHaveStyle("color: grey");
+  const text = screen.getByText('Disabled Text');
+  expect(text).toHaveStyle('color: grey');
 });

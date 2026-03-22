@@ -1,13 +1,15 @@
-import Table from "./Table";
-import TableHeader from "./TableHeader";
-import TableRow from "./TableRow";
-import TableCell from "./TableCell";
-import TableFooter from "./TableFooter";
+import Table from './Table';
+import TableHeader from './TableHeader';
+import TableRow from './TableRow';
+import TableCell from './TableCell';
+import TableFooter from './TableFooter';
 
-export default {
-  title: "Components/Table",
+const meta = {
+  title: 'Components/Table',
   component: Table,
 };
+
+export default meta;
 
 export const Default = () => (
   <Table>

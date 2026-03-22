@@ -1,24 +1,26 @@
-import Dropdown from "./Dropdown";
+import Dropdown from './Dropdown';
 
-export default {
-  title: "Components/Dropdown",
+const meta = {
+  title: 'Components/Dropdown',
   component: Dropdown,
   argTypes: {
-    options: { control: "array" },
-    disabled: { control: "boolean" }
-  }
+    options: { control: 'array' },
+    disabled: { control: 'boolean' },
+  },
 };
+
+export default meta;
 
 export const Default = {
   args: {
-    options: ["Option 1", "Option 2", "Option 3"],
-    disabled: false
-  }
+    options: ['Option 1', 'Option 2', 'Option 3'],
+    disabled: false,
+  },
 };
 
 export const Disabled = {
   args: {
-    options: ["Option 1", "Option 2", "Option 3"],
-    disabled: true
-  }
+    options: ['Option 1', 'Option 2', 'Option 3'],
+    disabled: true,
+  },
 };
