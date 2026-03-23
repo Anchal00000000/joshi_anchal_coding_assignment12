@@ -7,12 +7,12 @@ COPY package*.json ./
 RUN npm ci --legacy-peer-deps
 
 COPY . .
-RUN npm run build
+RUN npm run build-storybook
 
 # Production stage
 FROM nginx:alpine
 
-COPY --from=build /joshi_anchal_ui_garden_build_checks/build /usr/share/nginx/html
+COPY --from=build /joshi_anchal_ui_garden_build_checks/storybook-static /usr/share/nginx/html
 
 EXPOSE 8018
 

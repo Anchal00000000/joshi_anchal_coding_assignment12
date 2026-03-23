@@ -31,3 +31,8 @@ Automatically runs on every `git commit`:
 On every push/pull request to main:
 - Prettier, ESLint, Tests, and Build all run automatically
 - You will be notified by email if any check fails
+
+#docker build -t joshi_anchal_coding_assignment13 .
+#docker run -p 8018:8018 --name joshi_anchal_coding_assignment13 joshi_anchal_coding_assignment13
+#http://localhost:8018/
+#npm test -- --watchAll=false(Run tests)
