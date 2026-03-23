@@ -36,3 +36,8 @@ On every push/pull request to main:
 #docker run -p 8018:8018 --name joshi_anchal_coding_assignment13 joshi_anchal_coding_assignment13
 #http://localhost:8018/
 #npm test -- --watchAll=false(Run tests)
+
+
+
+
+docker rm -f joshi_anchal_coding_assignment13
